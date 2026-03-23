@@ -1,8 +1,83 @@
 <!DOCTYPE html>
-<html>
-<body style="background:black; color:white; text-align:center; padding:50px;">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KARMONA AI V2</title>
 
-<h1>TEST SUCCESS ✅</h1>
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white">
+
+<!-- NAVBAR -->
+<header class="flex justify-between items-center p-6">
+  <h1 class="text-xl font-bold">KARMONA AI V2</h1>
+
+  <nav class="space-x-6">
+    <a href="index.html" class="hover:text-blue-400">Home</a>
+    <a href="agents.html" class="hover:text-blue-400">Agents</a>
+    <a href="pricing.html" class="hover:text-blue-400">Pricing</a>
+    <a href="about.html" class="hover:text-blue-400">About</a>
+    <a href="contact.html" class="hover:text-blue-400">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="text-center py-20 px-6">
+  <h1 class="text-5xl font-bold">
+    Hire AI Agents to Automate Your Business
+  </h1>
+
+  <p class="mt-4 text-gray-400 text-lg">
+    Sales, Support, Marketing — Done by AI
+  </p>
+
+  <div class="mt-8">
+    <button class="bg-blue-500 px-6 py-3 rounded-xl">
+      Try AI Demo
+    </button>
+
+    <button class="bg-gray-700 px-6 py-3 rounded-xl ml-4">
+      Hire an Agent
+    </button>
+  </div>
+</section>
+
+<!-- CHATBOT -->
+<div class="fixed bottom-5 right-5 w-80 bg-gray-900 p-4 rounded-xl shadow-lg">
+  <p class="text-sm text-gray-400">AI Assistant</p>
+  <div id="chatbox" class="h-40 overflow-y-auto mt-2 text-sm"></div>
+  <input id="input" class="w-full mt-2 p-2 rounded text-black" placeholder="Type here..." />
+</div>
+
+<script>
+const chatbox = document.getElementById('chatbox');
+const input = document.getElementById('input');
+
+function addMessage(text) {
+  chatbox.innerHTML += `<p>${text}</p>`;
+}
+
+// Auto message
+addMessage("Hi 👋 What do you want to automate?");
+
+input.addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    const text = input.value;
+    addMessage("You: " + text);
+
+    let reply = "Check our AI agents in Agents page.";
+    if (text.toLowerCase().includes("sales")) {
+      reply = "Try our Sales AI Agent 🚀";
+    }
+
+    addMessage("AI: " + reply);
+    input.value = "";
+  }
+});
+</script>
 
 </body>
 </html>
