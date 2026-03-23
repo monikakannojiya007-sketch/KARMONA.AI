@@ -5,38 +5,70 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KARMONA AI</title>
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      color: #3b82f6;
+    }
+
+    section {
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    button {
+      background-color: #3b82f6;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background-color: #2563eb;
+    }
+  </style>
 </head>
 
-<body class="bg-black text-white">
+<body>
 
-<header class="flex justify-between items-center p-6">
-  <h1 class="text-xl font-bold">KARMONA AI</h1>
+<header>
+  <h1>KARMONA AI</h1>
 
-  <nav class="space-x-6">
-    <a href="#" class="hover:text-blue-400">Home</a>
-    <a href="#" class="hover:text-blue-400">Agents</a>
-    <a href="#" class="hover:text-blue-400">Pricing</a>
-    <a href="#" class="hover:text-blue-400">About</a>
-    <a href="#" class="hover:text-blue-400">Contact</a>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Agents</a>
+    <a href="#">Pricing</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
   </nav>
 </header>
 
-<section class="text-center py-20">
-  <h1 class="text-5xl font-bold">
-    Hire AI Agents to Automate Your Business
-  </h1>
+<section>
+  <h1>Hire AI Agents to Automate Your Business</h1>
+  <p>Sales, Support, Marketing — Done by AI</p>
 
-  <p class="text-gray-400 mt-4">
-    Sales, Support, Marketing — Done by AI
-  </p>
-
-  <div class="mt-6">
-    <button class="bg-blue-500 px-6 py-3 rounded-xl">
-      Try AI Demo
-    </button>
-  </div>
+  <button>Try AI Demo</button>
 </section>
 
 </body>
